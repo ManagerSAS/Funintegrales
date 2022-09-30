@@ -1,44 +1,52 @@
 <template>
-    <v-row>
-        <v-col cols="12" sm="12" md="12" lg="6">
-            <h1 class="pink--text pt-15 mb-6 display-1 font-weight-bold">
-                Planes de Previsión <br> Exequial
-            </h1>
-            <p class="mb-8 secondary--text">
-               Adquiere grandes beneficios en tu plan de previsión exequial, ven y Conoce el complemento ideal para la protección y tranquilidad en los momentos más importantes de tu vida y la de tu familia. En los olivos contamos con un amplio portafolio de servicios para la protección. 
-            </p>
-            <v-row>
-                <v-col cols="12" sm="12" md="12" lg="12" xl="5">
-                    <a  class="white--text" 
-                        href="https://docs.google.com/forms/d/e/1FAIpQLScVrr-wpQWw4r8l6xFRkBAjW_B8slsvMjQ26Kw11stGgPdkIA/viewform"
-                        target="_blank"
-                    > 
-                        <v-btn
-                            rounded
-                            large
-                            color="pink darken-1"
-                            dark                            
-                            target="_blank"
-                            class="shadow-principal"
-                        > Deseo Afiliarme en linea </v-btn>
-                    </a>
-                </v-col>
-                <v-col cols="12" sm="12" md="12" lg="12" xl="6">
-                    <v-btn
-                    rounded
-                    large
-                    color="pink darken-1"
-                    outlined                    
-                    to="/plans#empresariales"
-                > conocer los planes exequiales </v-btn>
-                </v-col>
-            </v-row>                
-        </v-col>
-        <v-col cols="12" sm="12" md="12" lg="6" class="d-none d-lg-flex">
-            <v-img
-                max-width="600"
-                src="https://res.cloudinary.com/dbepipmro/image/upload/v1632839873/imagen-principal_d3cqbw.png"
-            ></v-img>
-        </v-col>
-    </v-row>
+
+    <div>
+        <v-carousel class="d-none d-lg-block d-xl-block pc" :cycle="true"  delimiter-icon="mdi-seed"  hide-delimiter-background show-arrows-on-hover>
+            <v-carousel-item
+                v-for="({src},index) in sliderPc"
+                :key="index"
+                :src="src"
+                cycle
+            >
+            </v-carousel-item>
+        </v-carousel>
+        <v-carousel class="d-none d-md-block d-lg-none laptop" :cycle="true"  delimiter-icon="mdi-seed"  hide-delimiter-background show-arrows-on-hover>
+            <v-carousel-item
+                v-for="({src},index) in sliderLaptop"
+                :key="index"
+                :src="src"
+                cycle
+            >
+            </v-carousel-item>
+        </v-carousel>
+        <v-carousel class="cel d-block d-sm-none"   :cycle="true"  delimiter-icon="mdi-seed"  hide-delimiter-background show-arrows-on-hovers>
+            <v-carousel-item
+                v-for="({src},index) in sliderCel"
+                :key="index"
+                :src="src"
+                cycle
+            >
+            </v-carousel-item>
+        </v-carousel>
+    </div>
 </template>
+<script>
+export default ({
+    data() {
+        return{
+            sliderPc: [
+                {titulo: "Servicio al cliente", src:"https://res.cloudinary.com/dhl17zanz/image/upload/v1651865438/obfisnoc8kjsare2yrkd.png"},
+                {titulo: "La tranquilidad", src:"https://res.cloudinary.com/dhl17zanz/image/upload/v1651245266/BANNER_RED-03_k58mea.png"}
+            ],
+            sliderLaptop: [
+                {titulo: "Servicio al cliente", src:"https://res.cloudinary.com/dhl17zanz/image/upload/v1653657525/lhku5zjz0zgjjrvuvobe.jpg"},
+                {titulo: "La tranquilidad", src:"https://res.cloudinary.com/dhl17zanz/image/upload/v1653657551/vt9vlo6ewx20ndudseja.jpg"}
+            ],
+            sliderCel: [
+                {titulo: "Servicio al cliente", src:"https://res.cloudinary.com/dhl17zanz/image/upload/v1653657006/u8jqxhambggxwvytyzmz.jpg"},
+                {titulo: "La tranquilidad", src:"https://res.cloudinary.com/dhl17zanz/image/upload/v1653657768/sl9g1tcwwkrv3jwikbyd.jpg"}
+            ]
+        }
+    },
+})
+</script>

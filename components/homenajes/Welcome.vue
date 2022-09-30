@@ -17,9 +17,10 @@
                     > Ver Salas </v-btn>
                 </div>
             </v-col>
-            <v-col cols="12" sm="12" md="12" lg="6" class="d-none d-lg-flex">
+            <v-col cols="12" sm="12" md="12" lg="6" class="d-none d-lg-flex ">
                 <v-img
-                    src="https://res.cloudinary.com/dbepipmro/image/upload/v1632348454/planUnidos10Individual_tstgsd.png"
+                class="rounded-xl"
+                    src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
                 ></v-img>
             </v-col>
         </v-row>

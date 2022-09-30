@@ -1,18 +1,41 @@
 <template>
-    <v-row align="center" class="mt-15 mb-15">
-        <v-col cols="12" sm="12" md="12" lg="6">
-            <h1 class="olivos--text display-1 font-weight-bold mb-3">
-                Quienes somos
-            </h1>
-            <h2 class="secondary--text text-h6 mb-3">
-                MAS DE 25 AÑOS DE PREVISIÓN Y PRESTACIÓN DEL SERVICIO EXEQUIAL A LA COMUNIDAD LLANERA.
-            </h2>
-            <p class="secondary--text">
-                Somos una cooperativa de segundo grado, constituida el 8 de marzo de 1994, se crea con el apoyo de varias entidades del sector cooperativo regional y nacional y que hoy son asociados. El 31 de mayo de 1996 se inaugura la Sede en Villavicencio, actualmente contamos con infraestructura propia en los diferentes departamentos, con espacios que brindan comodidad y calidez, mostrando un nuevo estilo de prestación del servicio funerario.
-            </p>
-        </v-col>
-        <v-col cols="12" sm="12" md="12" lg="6" class="text-center">
-            <img src="../../static/logo.webp" alt="" class="mb-6"><br>
-        </v-col>
-    </v-row>
+    <section >
+        <h2 justify="center" align="center" class="mb-5 text-raleway font-weight-bold" 
+        style="color:#003B4C; font-size: 50px; background: linear-gradient(to right, #80C49E, #2EAE9B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            Los Olivos Encoofum
+        </h2>
+        <v-row justify="center" align="center" class="mb-15 mr-15 ml-15">
+            <v-col cols="12" sm="12" md="12" lg="5" >
+                <p class="text-comfortaa ">
+                    Somos una cooperativa de segundo grado que
+                    asocia a cooperativas y fondos de empleados de
+                    primer grado. Somos privilegiados al contar con
+                    respaldo solidario a través de nuestras asociadas, la
+                    crema y nata del cooperativismo está detrás de
+                    nosotros a través de la Aseguradora Solidaria de
+                    Colombia, operadas a través de la Red Nacional Los
+                    Olivos.
+                </p>
+                <p class="text-comfortaa ">
+                    EMCOOFUN ha sido y es hoy por hoy la más
+                    auténtica expresión de la integración cooperativa y
+                    solidaria. Nació para atender una necesidad sentida
+                    de las bases sociales para atender la partida al más
+                    allá de las familias de los asociados.
+                </p>
+            </v-col>
+            <v-col cols="12" sm="6" md="6" lg="6" class="text-center">
+                <iframe 
+                width="700"
+                height="355" 
+                src="https://www.youtube.com/embed/OlX4buc-vdk" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+            >
+            </iframe>
+            </v-col>
+        </v-row>
+    </section> 
 </template>

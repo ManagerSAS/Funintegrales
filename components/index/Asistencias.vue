@@ -1,35 +1,22 @@
 <template>
-    <v-row align="center" justify="center" class="mt-15">
-        <v-col cols="12" sm="12" md="12" lg="5" xl="5">
-            <div class="rounded-xl">
-                <v-carousel
-                    cycle
-                    hide-delimiters
-                    show-arrows-on-hover
-                    class="rounded-xl"
-                    height="600"
-                >                               
-                    <v-carousel-item
-                        v-for="({src}, i) in slides"
-                        :key="i"
-                        :src="src"
-                        reverse-transition="fade-transition"
-                        transition="fade-transition"
-                    ></v-carousel-item>
-                </v-carousel>
+    <v-row justify="center" align="center" class="ml-5 mt-10 mb-5 mr-5">
+        <v-col cols="12" sm="12" md="6" lg="5" xl="5">
+            <div class="rounded-xl ml-lg-15">
+                <img src="https://res.cloudinary.com/dhl17zanz/image/upload/v1653407889/neiva/b2yhke6s8lahbfvscjaz.png" width="600" alt="">
             </div>
         </v-col>
-        <v-col cols="12" sm="12" md="12" lg="6" xl="6">
-            <div class="ml-0 ml-md-15 pl-md-6">
+        <v-col cols="12" sm="12" md="6" lg="6" xl="6">
+            <div class="ml-md-5 pl-md-4">
+                <h2 class="mb-10 text-raleway font-weight-bold" style="color:#7AB929; font-size: 40px; ">Sinergia <br></h2>
                 <div class="mb-6">
-                    <h2 class="secondary--text display-1 font-weight-bold">Exclusivas Asistencias <br> para ti y toda tu familia.</h2>
-                    <p class="mb-6 title secondary--text">Hay momentos únicos para vivirlos una y otra vez.</p>
-                    <p class="secondary--text">Adquiere grandes beneficios en tu plan de previsión exequial, ven y Conoce el complemento ideal para la protección y tranquilidad en los momentos más importantes de tu vida y la de tu familia. </p>
+                    <p class="text-comfortaa mb-6" style="font-size: 20px">Los olivos, que es hoy líder en la prestación de servicios funerarios y previsión exequial en Colombia, presente en todo el territorio nacional con más de 261 salas de velación propias y aproximadamente 650 en convenio </p>
+                    <p class="text-comfortaa" style="font-size: 20px">Los Olivos demuestra que la solidaridad vale la pena, porque las personas aprecian cuando se les trata con humanidad.</p>
                 </div>
                 <div class="mb-6">
                     <v-btn 
-                        class="teal accent-3 shadow-principal btn-hover"
-                        rounded
+                        style="background: linear-gradient(to right, #9FC419, #7AB929); color: white;"
+                        class="shadow-principal btn-hover"
+                        rounded-xl
                         dark
                         large
                     >
@@ -41,22 +28,4 @@
         </v-col>
     </v-row>
 </template>
-<script>
 
-export default{
-
-    data(){
-        return{
-            cycle: false,
-            slides: [
-                { text:'Asistencia Medica', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631825541/Doctora_rtmqb8.jpg' },
-                { text:'Asistencia desempleo', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831727/Personal_gcvquy.jpg'  },
-                { text:'Asistencia Tercera Edad', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831727/Tercera_Edad_lmgdec.jpg'  },
-                { text:'Asistencia Para Mascota', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831728/Mascota_lssv2t.jpg'  },
-                { text:'Asistencia Telefonica', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831728/Telefonica_kcyeu7.jpg'  },
-            ],
-        }
-    }
-
-}
-</script>

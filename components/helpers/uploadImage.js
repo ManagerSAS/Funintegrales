@@ -1,25 +1,32 @@
-import cloudinaryApi from "../api/cloudinaryApi"
-
-const uploadImage = async( file ) => {
+// import cloudinaryApi from "../api/cloudinaryApi"
+// import { uploadWidget } from 'ngx-cloudinary-upload-widget'
+const uploadImage =  ( file ) => {
+    const api = "https://api.cloudinary.com/v1_1/olivos-villavicencio/image/upload";
     if( !file ) return
-
+    
     try {
+       console.log(file)
+        const formdata = new FormData();
+        formdata.append("upload_preset", "noveltys");
+        formdata.append("file", file[0]);
 
-        const formData = new FormData()
-        formData.append('upload_preset','noveltys')
-        formData.append('file', file )
+        const requestOptions = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
+        };
 
-        // const url = 'https://api.cloudinary.com/v1_1/dbepipmro/image/upload'
-        const { data } =  await cloudinaryApi.post('', formData)
-        // console.log(data)
-        return data.secure_url
-        
-    } catch (error) {
+        fetch(api, requestOptions)
+        .then(response => response.json())
+        .then(result => {return result.url})
+        .catch(error => {return error});
+   
+    }
+    catch (error) {
         // console.error('Error al cargar la imagen revisar logs')
         // console.log(error)
         return null
     }
 }
 
-
-export default uploadImage
+export default uploadImage 

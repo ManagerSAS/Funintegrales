@@ -67,7 +67,7 @@ export default {
                     icon:'mdi-human-male mdi-36px',
                     color: 'teal accent-3',
                     clases: 'box-shadow-teal',
-                    title:'Básico',
+                    title:'Plan 1',
                     subtitle: 'Esta opción es pensada para que las familias de escasos recursos puedan dar un homenaje al amor a su ser querido.',
                     list:[
                         'Traslado local del cuerpo.',
@@ -93,7 +93,7 @@ export default {
                     icon:'mdi-star-outline mdi-36px',
                     color: 'blue accent-3',
                     clases: 'box-shadow-blue',
-                    title:'Platino',
+                    title:'Plan 2',
                     subtitle: ' esta opción presenta cobertura completa en sedes de homenajes Los Olivos.',
                     list:[
                         'Traslado local del cuerpo.',
@@ -120,7 +120,7 @@ export default {
                     icon:'mdi-star mdi-36px',
                     color: 'orange accent-3',
                     clases: 'box-shadow-orange',
-                    title:'Gold',
+                    title:'Plan 3',
                     subtitle: 'Esta opción permite contar con un homenaje VIP para su ser querido en instalaciones de Los Olivos.',
                     list:[
                         'Traslado local del cuerpo.',
@@ -147,7 +147,7 @@ export default {
                     icon:'mdi-heart mdi-36px',
                     color: 'pink accent-3',
                     clases: 'box-shadow-pink',
-                    title:'Eterno',
+                    title:'Plan 3',
                     subtitle: 'Esta opción está habilitado solo para la ciudad de San Jose del Guaviare y permite contar con un homenaje que cubre hasta los gastos de exhumación, osario o cenizario a perpetuidad.',
                     list:[
                         'Traslado local del cuerpo.',

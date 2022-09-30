@@ -1,99 +1,21 @@
 <template>
     <div class="mt-15 mb-15">
         <v-row>
-            <v-col cols="12" sm="12" md="12" lg="6" xl="6">
-                <div>
-                    <h2 class="display-1 olivos--text font-weight-bold">
-                        Red Olivos
-                    </h2>
-                </div>
+            <v-col cols="12" sm="12" md="6" lg="5" class="ml-15">
+                <img :src="redolivos" height="550">
             </v-col>
-        </v-row>
-
-        <v-row class="mt-15 mb-15">
-            <v-col cols="12" sm="12" md="12" lg="6" xl="6">                
-                <v-card class="rounded-xl card-shadow-2 mb-6" color="teal darken-3" dark>
-                    <v-card-title>
-                        Serfunllanos
-                        <v-spacer></v-spacer>
-                        <v-icon> mdi-map-marker-outline mdi-36px </v-icon>
-                    </v-card-title>
-                    <v-card-text>
-                        <v-divider class="mb-6"></v-divider>
-                        Villavicencio, Yopal, Granada, Acacias, Puerto Gaitán, Cumaral, Aguazul, Paz de Ariporo, Inirida, San José del Guaviare.
-                    </v-card-text>
-                </v-card>
-
-                <v-card class="rounded-xl card-shadow-2 mb-6">
-                    <v-card-title class="olivos--text">
-                        Region caribe
-                        <v-spacer></v-spacer>
-                        <v-icon color="teal accent-4"> mdi-map-marker-outline mdi-36px </v-icon>
-                    </v-card-title>
-                    <v-card-text>
-                        <v-divider class="mb-6"></v-divider>
-                        Barranquilla, Cartagena, Monteria, Rioacha, Santa Marta, Valledupar.                        
-                    </v-card-text>
-                </v-card>
-
-                <v-card class="rounded-xl card-shadow-2 mb-6">
-                    <v-card-title class="olivos--text">
-                        Santander
-                        <v-spacer></v-spacer>
-                        <v-icon color="teal accent-4"> mdi-map-marker-outline mdi-36px </v-icon>
-                    </v-card-title>
-                    <v-card-text>
-                        <v-divider class="mb-6"></v-divider>
-                        Barrancabermeja, Bucaramanga, Cúcuta.
-                    </v-card-text>
-                </v-card>
-                <v-card class="rounded-xl card-shadow-2 mb-6">
-                    <v-card-title class="olivos--text">
-                        Costa pacifica
-                        <v-spacer></v-spacer>
-                        <v-icon color="teal accent-4"> mdi-map-marker-outline mdi-36px </v-icon>
-                    </v-card-title>
-                    <v-card-text>
-                        <v-divider class="mb-6"></v-divider>
-                        Cáli, Palmira, Pasto, Tulúa.
-                    </v-card-text>
-                </v-card>
-            </v-col>
-            <v-col cols="12" sm="12" md="12" lg="6" xl="6">
-                <v-card class="rounded-xl card-shadow-2 mb-6">
-                    <v-card-title class="olivos--text">
-                        Zona centro
-                        <v-spacer></v-spacer>
-                        <v-icon color="teal accent-4"> mdi-map-marker-outline mdi-36px </v-icon>
-                    </v-card-title>
-                    <v-card-text>
-                        <v-divider class="mb-6"></v-divider>
-                        Bogotá, Duitama, Ibague, Neiva, Tunja
-                    </v-card-text>
-                </v-card>
-                
-                <v-card class="rounded-xl card-shadow-2 mb-6">
-                    <v-card-title class="olivos--text">
-                        Antioquia
-                        <v-spacer></v-spacer>
-                        <v-icon color="teal accent-4"> mdi-map-marker-outline mdi-36px </v-icon>
-                    </v-card-title>
-                    <v-card-text>
-                        Medellin.
-                    </v-card-text>
-                </v-card>
-
-                <v-card class="rounded-xl card-shadow-2 mb-6">
-                    <v-card-title class="olivos--text">
-                        Eje cafetero
-                        <v-spacer></v-spacer>
-                        <v-icon color="teal accent-4"> mdi-map-marker-outline mdi-36px </v-icon>
-                    </v-card-title>
-                    <v-card-text>
-                        Armenia, Manizales, Pereira.
-                    </v-card-text>
-                </v-card>
-
+            <v-col cols="12" sm="12" md="6" lg="6" class="mr-15 text-comfortaa mt-15"  >
+                <h2 style="font-size:40px; color: #E9532D; " class="mb-5">Red Olivos</h2>
+                <p style="font-size:20px;">Los Olivos es la RED de Servicios Funerarios más
+                importante de Colombia: Con la mayor cobertura
+                geográfica nacional, más de 6 millones de personas
+                protegidas, 16 sedes regionales, más de 283 salas
+                de homenajes propias, 253 convenios, 13 hornos
+                crematorios, 10 parques cementerios, 179 carrozas y
+                más de 1.810 empleados directos. Garantizamos los
+                espacios necesarios para que puedan brindar a sus
+                seres queridos un digno homenaje a su legado de
+                vida.</p>
             </v-col>
         </v-row>
     </div>
@@ -102,15 +24,7 @@
 export default {
     data() {
         return{
-            cycle: false,
-            slides: [
-                { text:'Asistencia Medica', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631825541/Doctora_rtmqb8.jpg' },
-                { text:'Asistencia desempleo', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831727/Personal_gcvquy.jpg'  },
-                { text:'Asistencia Tercera Edad', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831727/Tercera_Edad_lmgdec.jpg'  },
-                { text:'Asistencia Para Mascota', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831728/Mascota_lssv2t.jpg'  },
-                { text:'Asistencia Telefonica', to: '', src: 'https://res.cloudinary.com/dbepipmro/image/upload/v1631831728/Telefonica_kcyeu7.jpg'  },
-            ],
-            caribe:['Barranquilla','Cartagena', 'Monteria']
+            redolivos:'https://res.cloudinary.com/dhl17zanz/image/upload/v1653691595/neiva/aei227lsaqwkxlmqmhu5.png'
         }        
     },
 }

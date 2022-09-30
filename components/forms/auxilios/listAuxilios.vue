@@ -36,7 +36,7 @@ export default {
         return{
             items:[
                 {
-                    title: 'Auxilio funerario',
+                    title: 'Aporte funerario',
                     description: 'En caso de que el fallecimiento del afiliado principal o sus beneficiarios se produzca en un lugar donde Los Olivos no tenga sede propia o convenio adscrito a la Red Nacional Los Olivos, se reconocerá un aporte solidario <br><br> Los documentos para anexar a esta solicitud son los siguientes:',
                     list:[
                         'Carta donde expliquen las causas de no utilización del servicio',
@@ -50,7 +50,7 @@ export default {
                     subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
-                    title: 'Auxilio Osario o Cenizario',
+                    title: 'Aporte Osario o Cenizario',
                     description: 'En concordancia con lo dispuesto en las condiciones generales de los convenios empresariales establecidos y en los montos allí descritos. <br><br> Los documentos a anexar para esta solicitud son los siguientes:',
                     list:[
                         'Carta de solicitud',
@@ -65,7 +65,7 @@ export default {
                     subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
-                    title: 'Auxilio repatriación de cenizas',
+                    title: 'Aporte repatriación de cenizas',
                     description: 'Se reconocerá el valor del flete correspondiente a la repatriación de las cenizas.<br><br> Los documentos a anexar para esta solicitud son los siguientes:',
                     list:[
                         'Carta de solicitud',
@@ -80,7 +80,7 @@ export default {
                     subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
-                    title: 'Auxilio por fallecimiento en el exterior afiliado principal',
+                    title: 'Aporte por fallecimiento en el exterior afiliado principal',
                     description: 'En caso de que el fallecimiento se produzca en un lugar fuera del territorio nacional, Serfunllanos no estará obligada a la prestación de los servicios a que este contrato se refiere consignados. En estos casos la Empresa reconocerá únicamente por el afiliado principal, en forma subsidiaria. <br><br> Los documentos a anexar para esta solicitud son los siguientes:',
                     list:[
                         'Carta de solicitud',
@@ -95,7 +95,7 @@ export default {
                     subtitle:'Factura original de gastos sufragados para la atención del homenaje debidamente cancelada las cuales deben cumplir con las exigencias mínimas establecidas por la DIAN.<br><br> Para el efecto esto es, tal como lo establece el artículo 617 del Estatuto Tributario, lo siguiente:',
                 },
                 {
-                    title: 'Auxilio por desaparición afiliado principal',
+                    title: 'Aporte por desaparición afiliado principal',
                     description: 'En caso de que sea declarada por las autoridades competentes la muerte por desaparición del afiliado principal, Serfunllanos, reconoce un aporte solidario. <br><br> Los documentos a anexar para esta solicitud son los siguientes:',
                     list:[
                         'Carta de solicitud',

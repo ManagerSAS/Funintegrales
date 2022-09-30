@@ -1,16 +1,16 @@
 <template>
-    <v-container fluid>
-		<v-row justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0">
-			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
-                <History/>
-            </v-col>
-        </v-row>
-        <v-row justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0">
-			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
+    <div >
+        <h1 justify="center" align="center"  class="mb-10 text-raleway font-weight-bold" style="color:#003B4C; font-size: 40px; ">
+            Quiénes Somos
+        </h1>
+       <History style="background-color: rgb(227,235,235,0.2)"/>
+        <v-row justify="center" align="center" class="mt-15 mb-5 pa-md-0">
+			<v-col cols="12" sm="12" md="12" lg="10" xl="8">
                 <Cards/>
             </v-col>
         </v-row>
-        <v-row justify="center" align="center" class="mt-15 mb-15 pa-md-0 bg-map">
+        <Asociados style="background-color: rgb(227,235,235,0.2)"/>
+        <v-row justify="center" align="center" class="mt-5">
 			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
                 <Redolivos/>
             </v-col>
@@ -25,18 +25,19 @@
                 <Principies/>
             </v-col>
         </v-row>
-    </v-container>
+    </div>
 </template>
 <script>
 import History from '~/components/about/aboutDescription.vue';
 import Cards from '~/components/about/cardsVisionMision.vue';
+import Asociados from '~/components/index/Asociados.vue';
 import Redolivos from '~/components/about/redOlivos.vue';
 import Values from '~/components/about/valuesSerfunllanos.vue';
 import Principies from '~/components/about/principiesSerfunllanos.vue';
 
 export default {
     components:{
-        History, Cards, Redolivos, Values, Principies
+        History, Cards, Redolivos, Values, Principies,Asociados
     },
 }
 </script>

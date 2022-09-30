@@ -1,26 +1,24 @@
 <template>
-    <v-row class="mt-15 mb-15">
-        <v-col cols="12" sm="12" md="12" lg="6">
-            <v-card class="rounded-xl card-shadow-2">                
-                <v-card-title class="olivos--text">
-                    <v-icon color="teal accent-4"> mdi-leaf mdi-36px</v-icon>
-                    <span class="ml-5">Misión</span>
-                </v-card-title> 
-                <v-card-text class="subtitle-1">
-                    En SERFUNLLANOS somos una entidad del sector solidario, socialmente responsable con el medio ambiente y la sociedad, dedicada a la previsión y prestación de servicios exequiales integrales a nuestros asociados y comunidad en general.
-                </v-card-text>
-            </v-card>
-        </v-col>
-        <v-col cols="12" sm="12" md="12" lg="6">            
-            <v-card class="rounded-xl card-shadow-2">
-                <v-card-title class="olivos--text">
-                    <v-icon color="teal accent-4"> mdi-security mdi-36px</v-icon>
-                    <span class="ml-5">Visión</span>
-                </v-card-title> 
-                <v-card-text class="subtitle-1">                
-                    En el 2021 SERFUNLLANOS mantendrá el liderazgo en el sector, y la preferencia de la comunidad en la Orinoquia y Amazonia colombiana, por la previsión y oferta de servicios exequiales integrales, soportados en una sólida red de atención a nivel regional y nacional, con productos y servicios de alta calidad en la cultura de un homenaje al amor.
-                </v-card-text>
-            </v-card>
-        </v-col>
-    </v-row>
+    <div>
+        <v-row class="mt-15 mb-15">
+            <v-col cols="12" sm="2" md="2" lg="2" justify="center" align="center">
+                <img src="../../static/iconos/mision.png" height="100"><br>
+                <h2 justify="center" align="center" class="text-raleway">Misión</h2>
+            </v-col>
+            <v-col cols="12" sm="12" md="12" lg="10" class="mt-5 text-raleway">
+                EMCOOFUN, organización cooperativa, promueve la protección exequial, prestación de servicios funerarios y de destino final integrales de excelente calidad, orientada a la inclusión social de las bases sociales de sus asociadas, los empleados y la comunidad en general de los departamentos del Huila, Caquetá y Putumayo fortaleciendo 
+                la alianza con la Red Olivos, protegiendo el medio ambiente y promoviendo ambientes de trabajo seguros y saludables.
+            </v-col>
+        </v-row>
+        <v-row class="mt-15 mb-15">
+            <v-col cols="12" sm="12" md="12" lg="10" class="mt-10 text-raleway">
+                EMCOOFUN será reconocida como la cooperativa funeraria pionera en la prestación de servicios y oferta de productos integrales, enfocada al servicio de calidad;  
+                fundamentada en el cumplimiento de la promesa de valor y de la normatividad.
+            </v-col>
+            <v-col cols="12" sm="2" md="2" lg="2" justify="center" align="center">
+                <img src="../../static/iconos/vision.png" height="100"><br>
+                <h2  justify="center" align="center" class=" text-raleway">Vision</h2>
+            </v-col>
+        </v-row>
+    </div>
 </template>

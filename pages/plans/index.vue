@@ -1,37 +1,34 @@
 <template>
-    <v-container fluid>
-		<v-row justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0">
-			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
-                <Welcome/>
-            </v-col>
-        </v-row>
-        <v-row id="empresariales" justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0" >
-			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
-                <Cards/>
-            </v-col>
-        </v-row>
-        <v-row id="empresariales" justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0" >
-			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
-                <Asistances/>
-            </v-col>
-        </v-row>
-        <v-row id="empresariales" justify="center" align="center" class="mt-15 mb-15 pa-10 pa-md-0" >
-			<v-col cols="12" sm="12" md="12" lg="12" xl="9">
-                <Insurances/>
-            </v-col>
-        </v-row>        
-    </v-container>
+    <div>
+        <Welcome/>
+        <Afiliacion />
+        <Deceso style="background-color: rgb(227,235,235,0.5)" />
+        <Velacion/>
+        <Cortejo style="background-color: rgb(227,235,235,0.5)"/>
+        <DestinoFinal/>
+        <Preguntas style="background: linear-gradient(90deg, rgba(237,109,129,1) 0%, rgba(226,53,62,1) 100%)"/>
+    </div>
 </template>
 <script>
 import Welcome from '~/components/plans/Welcome.vue';
-import Cards from '~/components/plans/CardsBussinessIndividual.vue';
-import Asistances from '~/components/plans/Asistances.vue';
-import Insurances from '~/components/plans/lifeInsurances.vue';
+import Afiliacion from '~/components/plans/afiliacion.vue';
+import Deceso from '~/components/plans/deceso.vue';
+import Velacion from '~/components/plans/velacion.vue';
+import Cortejo from '~/components/plans/cortejo.vue';
+import DestinoFinal from '~/components/plans/destinoFinal.vue';
+import Preguntas from '~/components/plans/preguntasFrecuentes.vue';
+
 
 
 export default {
     components:{
-        Welcome, Cards, Asistances, Insurances
+        Welcome,
+        Afiliacion,
+        Deceso,
+        Velacion,
+        Cortejo,
+        DestinoFinal,
+        Preguntas
     },
 }
 </script>

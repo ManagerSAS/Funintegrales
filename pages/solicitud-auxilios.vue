@@ -5,7 +5,7 @@
 		        <v-row>
 					<v-col cols="12" sm="12" md="12" lg="7">
 						<h1 class="color-blue-dark display-1 font-weight-bold">
-							Solicitud de auxilios
+							Solicitud de aportes
 						</h1>
 						<!-- <p class="secondary--text">
 							Revise y prepare la documentación que necesite, según su solicitud. Toda la documentación deberá subirse en un único archivo .pdf de máximo 22MB,

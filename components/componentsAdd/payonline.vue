@@ -49,14 +49,14 @@ export default {
                     title: 'Tarjeta de credito',
                     icon: 'mdi-credit-card',
                     description: 'Realice el pago de su plan de previsión exequial, Homenaje al amor o cualquier otro tipo de pago',
-                    link:'https://sites.placetopay.com/losolivos_villavicencio',
+                    // link:'https://sites.placetopay.com/losolivos_villavicencio',
                     btn: 'Pagos con tarjeta de credito'
                 },
                 {
                     title: 'PSE',
                     icon: 'mdi-credit-card-outline',
                     description: 'Realice el pago de su plan de previsión exequial, Homenaje al amor o cualquier otro tipo de pago por PSE',
-                    link:'https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=4319',
+                    // link:'https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=4319',
                     btn: 'Pagos PSE'
                 }
             ]

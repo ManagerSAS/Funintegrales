@@ -1,7 +1,7 @@
 <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script> 
 <template>
     <div>
-        <vue-recaptcha sitekey="6Lef5JocAAAAAMRlwsFX2tCqRdLohymFmlrW6CeT" :loadRecaptchaScript="true"
+        <vue-recaptcha sitekey="6LeLnhseAAAAAM9DThsU87HH6WsPAspf9CJUITQr" :loadRecaptchaScript="true"
             @verify="verifyCaptcha"            
         ></vue-recaptcha>
     </div>

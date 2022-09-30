@@ -1,16 +1,15 @@
 <template>
   	<v-app>
-		<v-app-bar
+		<v-toolbar
+			      
 			color="white"
-			class="pl-md-16 pr-md-16 border-header"
-			app        
+			class="pl-md-16 pr-md-16"
 			flat
 			height="80"
 		>        
-        	<v-app-bar-nav-icon class="d-md-flex d-lg-none"></v-app-bar-nav-icon>
 
-        	<v-toolbar-title>
-	            <img src="../static/nav/iconLogin.png" alt="" width="65px">
+        	<v-toolbar-title class="pt-3">
+	            <a href = "https://www.losolivosneiva.com/"><img src="../static/nav/logo.webp" alt="" width="130px" ></a>
         	</v-toolbar-title>
         
         	<v-spacer></v-spacer>
@@ -21,33 +20,33 @@
 				:to="{ path: to }"
 				class="s-acortag color-blue-dark d-none d-md-none d-lg-flex"    
 			> {{ text }}
-			</NuxtLink>
+			</NuxtLink> 
+			
+			<v-app-bar-nav-icon class="d-block d-lg-none d-md-block d-sm-block"  @click="drawer = !drawer"></v-app-bar-nav-icon>
+			
+    	</v-toolbar>
 
-			<div class="box-search d-none d-md-flex">
-				<v-text-field
-					placeholder="Buscar"
-					rounded
-					filled
-					hide-details
-					append-icon="mdi-text-search"
-					color="#003B4C"
-				></v-text-field>
-			</div>
-    	</v-app-bar>
+		<v-navigation-drawer v-model="drawer"  app temporary> 
+			<v-list density="compact">
+				<v-list-subheader><a href = "https://www.losolivosneiva.com/"><img src="../static/nav/logo.webp" alt="" width="130px" ></a></v-list-subheader>
+				<v-list-item
+					v-for="({ text, to }, index) in  btnsNav" 
+					:key="index"
+					:to="{ path: to }"
+					class="color-blue-dark "  
+				>
+					<v-list-item-title >{{text}}</v-list-item-title>
+				</v-list-item>
+			</v-list>
+		</v-navigation-drawer>
 
-    	<v-main>
-      		<v-container>
+    	<v-main>	
         		<Nuxt />
-      		</v-container>
     	</v-main>
 
-		<v-footer color="grey lighten-4">	
-      		<v-container>
-	      		<Footer/>
-			</v-container>
+		<v-footer style="background: linear-gradient(270deg, #8fddaa 0%, #59ab9b 100%);">	
+	      		<Footer />
 	    </v-footer>
-    
-    
   </v-app>
 </template>
 
@@ -62,31 +61,31 @@ export default {
   	data () {
 	    return {
 			rightDrawer: null,
-
+			drawer: false,
 			fixed: false,
 			btnsNav:[
 				{ text: 'Inicio', to: '/' },
 				{ text: 'Quienes somos', to: 'about' },
 				{ text: 'Planes exequiales', to: 'plans' },
-				{ text: 'Homenajes', to: 'homenaje'  },
-				{ text: 'Sedes' },
+				{ text: 'Homenajes', to: '/'  },
+				{ text: 'Sedes',to: 'sedes' },
 				{ text: 'Pagos' },
 				{ text: 'Noticias' },
 			]
     	}
-	}
+	},
+
 }
 </script>
 
 <style lang="scss" scoped>
-
 .border-header{
     border-bottom: 1px solid #80808033 !important;
     background-color: rgba(255,255,255,var(0.5));
 }
 .s-acortag{
     padding: 15px 15px;
-    margin-right: 5px;
+    margin-right: 1px;
     text-decoration: none;
 	color: #003B4C;
 }

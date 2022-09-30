@@ -5,10 +5,10 @@
 		        <v-row>
 					<v-col cols="12" sm="12" md="12" lg="10">
 						<h1 class="color-blue-dark display-1 font-weight-bold mb-6">
-							Homenajes:
+							Planeacion del homenaje:
 						</h1>
 						<p class="secondary--text">
-							Para lograr un proceso más humano en la atención del homenaje de su ser querido queremos que tenga presente la siguiente información antes de ingresar a la coordinación del servicio.
+							Para lograr una oportuna atención en la solicitud, llena el siguiente formulario con la información pertinente
 						</p>
 					</v-col>
 				</v-row>

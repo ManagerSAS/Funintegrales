@@ -1,162 +1,199 @@
 <template>
-    <v-row align="center" justify="center" class="mt-15 mb-15">
-        <v-col cols="12">
-            <v-card class="rounded-xl pa-2 shadow-principal">
-                <v-row no-gutters align="center">
-                    <v-col cols="12" sm="12" md="12" lg="6">
-                        <v-img
-                            class="rounded-xl d-none d-lg-flex"
-                            src="https://res.cloudinary.com/dbepipmro/image/upload/v1633127803/Contacto_ff9xdr.jpg"
-                            width="523"
-                            height="780"
-                        >
-                            <div class="ma-15 pt-15 pb-15">
-                                <h2 class="display-1 white--text mt-15 mb-15"> Informacion de contacto </h2>
-                                <v-row no-gutters class="mb-6">
-                                    <v-col cols="2">
-                                        <v-icon color="white"> mdi-email mdi-24px </v-icon>
-                                    </v-col>
-                                    <v-col cols="10">
-                                        <p class="white--text">contactenosvillavicencio@losolivos.co </p>
-                                    </v-col>
-                                </v-row>
-                                <v-row no-gutters class="mb-6">
-                                    <v-col cols="2">
-                                        <v-icon color="white"> mdi-phone mdi-24px </v-icon>
-                                    </v-col>
-                                    <v-col cols="10">
-                                        <p class="white--text">668 52 86 - 018000 915286 </p>
-                                    </v-col>
-                                </v-row>
-                                <v-row no-gutters class="mb-6">
-                                    <v-col cols="2">
-                                        <v-icon color="white"> mdi-map-marker mdi-24px </v-icon>
-                                    </v-col>
-                                    <v-col cols="10">
-                                        <p class="white--text">Avenida 40 N° 20-05/15 </p>
-                                    </v-col>
-                                </v-row>
+    <div >
+        <v-row  align="center" justify="center" class="align-items-center p-green-light" >
+            <v-col cols="12" md="12" lg="11" color="#26A69A" class="text-center text-md-center">
+                <img src="../../static/iconos/contacto.png" alt="" height="120">
+                <h2 class="mb-10 text-raleway font-weight-bold" style="color:#003B4C; font-size: 40px; ">CONTÁCTANOS</h2>
+                <p class="text-comfortaa">Para nosotros, es agradable saber tu opinión. Creemos que el crecimiento de una empresa va ligado a su capacidad de escuchar y recibir con agrado lo que sus audiencias dicen de ella. Por eso, te invitamos a hacer parte del equipo que nos retroalimenta día a día con el fin de mejorar.</p>
+            </v-col>
+        </v-row>
+        <v-row align="center" justify="center">
+            <v-col cols="12" sm="12" md="12" lg="11" class="pt-10">    
+                <v-form ref="formContact" autocomplete="off">
+                    <v-row>
+                        <v-col cols="12" sm="12" md="4" lg="4">
+                            <v-text-field
+                                v-model="nombre"
+                                :rules="nameRules"
+                                label="Nombre Completo"
+                                placeholder="Jose Alejandro"
+                                color="#26A69A"
+                                hide-details
+                            ></v-text-field>
+                        </v-col>
+                        <v-col cols="12" sm="12" md="4" lg="4">
+                            <v-text-field
+                                v-model="email"
+                                label="Email"
+                                :rules="emailRules"
+                                placeholder="email@example.com"
+                                color="#26A69A"
+                                hide-details
+                            ></v-text-field>
+                        </v-col>
+                         <v-col cols="12" sm="12" md="4" lg="4">
+                            <v-text-field
+                                v-model="telefono"
+                                label="Telefono"
+                                type="number"
+                                placeholder="3142484466"
+                                color="#26A69A"
+                                hide-details
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="12" sm="12" md="4" lg="4">
+                            <v-text-field
+                                v-model="telefono"
+                                label="Telefono"
+                                type="number"
+                                placeholder="3142484466"
+                                color="#26A69A"
+                                hide-details
+                            ></v-text-field>
+                        </v-col>
+                        <v-col cols="12" sm="12" md="4" lg="4">
+                            <v-text-field
+                                v-model="documento"
+                                label="Documento"
+                                type="number"
+                                placeholder="487975474547"
+                                color="#26A69A"
+                                hint="El numero de documento no debe contener puntos."
+                                persistent-hint
+                            ></v-text-field>
+                        </v-col>
+                         <v-col cols="12" sm="12" md="4" lg="4">
+                            <v-text-field
+                                v-model="ciudad"
+                                label="Ciudad"
+                                placeholder="ciudad residencia"
+                                color="#26A69A"
+                                hide-details
+                            ></v-text-field>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col cols="12" sm="12" md="4" lg="4">
+                            <v-text-field
+                                v-model="asunto"
+                                label="Asunto"
+                                placeholder=""
+                                color="#26A69A"
+                                hide-details
+                            ></v-text-field>
+                        </v-col>
+                        <v-col cols="12" sm="12" md="4" lg="8">
+                            <v-textarea
+                                v-model="mensaje"
+                                label="Mensaje"
+                                color="#26A69A"
+                                rows="1"
+                                hide-details
+                            ></v-textarea>
+                        </v-col>
+                    </v-row>
+                    <v-row class="mt-5">
+                        <v-row no-gutters align="center">
+                        <v-col cols="1">
+                            <v-checkbox
+                                v-model="termsConditions"
+                                color="#26A69A"
+                                :rules="nameRules"
+                                value=""
+                                required
+                                hide-details
+                            ></v-checkbox>
+                        </v-col>
+                        <v-col cols="11">
+                            <div class="mt-5">
+                                <Nuxt-link to="terminosycondiciones/privacidad-de-datos"> Acepto terminos y Condiciones </Nuxt-link>
                             </div>
-                        </v-img>
-                    </v-col>
-                    <v-col cols="12" sm="12" md="12" lg="6" class="pa-5">
-                        <h2 class="secondary--text display-1 font-weight-bold mb-6">Contactanos</h2>
-                        <p>En los Olivos Llanos Orientales atendemos y orientamos a nuestros afiliados para la coordinación de homenajes las 24 horas de día, los 365 días del año.</p>
-                        <v-form>
-                            <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="6">
-                                    <v-text-field
-                                        label="Nombre"
-                                        placeholder="Juan Manuel"
-                                        color="teal darken-4"
-                                        hide-details
-                                    ></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="12" md="12" lg="6">
-                                    <v-text-field
-                                        label="Apellidos"
-                                        placeholder="Camacho"
-                                        color="teal darken-4"
-                                        hide-details
-                                    ></v-text-field>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="6">
-                                    <v-text-field
-                                        label="Email"
-                                        placeholder="email@example.com"
-                                        color="teal darken-4"
-                                        hide-details
-                                    ></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="12" md="12" lg="6">
-                                    <v-text-field
-                                        label="Telefono"
-                                        placeholder="3223821204"
-                                        color="teal darken-4"
-                                        hide-details
-                                    ></v-text-field>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="12">
-                                    <v-text-field
-                                        label="Dirección de contacto"
-                                        placeholder="Carrera 14 # 22 - 28"
-                                        color="teal darken-4"
-                                        hide-details
-                                    ></v-text-field>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="12">
-                                    <v-text-field
-                                        label="Documento"
-                                        placeholder="487975474547"
-                                        color="teal darken-4"
-                                        hint="El numero de documento no debe contener puntos."
-                                        persistent-hint
-                                    ></v-text-field>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="6">
-                                    <v-text-field
-                                        label="Ciudad"
-                                        placeholder="ciudad residencia"
-                                        color="teal darken-4"
-                                        hide-details
-                                    ></v-text-field>
-                                </v-col>
-                                <v-col cols="12" sm="12" md="12" lg="6">
-                                    <v-text-field
-                                        label="Asunto"
-                                        placeholder=""
-                                        color="teal darken-4"
-                                        hide-details
-                                    ></v-text-field>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="12">
-                                    <v-textarea
-                                        label="Mensaje"
-                                        color="teal darken-4"
-                                        rows="2"
-                                        hide-details
-                                    ></v-textarea>
-                                    <v-row no-gutters align="center">
-                                        <v-col cols="2">
-                                            <v-checkbox
-                                                color="teal darken-4"
-                                                value=""
-                                                hide-details
-                                            ></v-checkbox>
-                                        </v-col>
-                                        <v-col cols="10">
-                                            <div class="mt-5">
-                                                <Nuxt-link to="#"> Ver términos y Condiciones </Nuxt-link>
-                                            </div>
-                                        </v-col>
-                                    </v-row>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="12">
-                                    <v-btn
-                                        class="shadow-principal btn-hover"
-                                        color="teal darken-4"
-                                        rounded
-                                        large
-                                        dark
-                                    > Enviar mensaje </v-btn>
-                                </v-col>
-                            </v-row>
-                        </v-form>
-                    </v-col>
-                </v-row>
-            </v-card>
-        </v-col>
-    </v-row>
+                        </v-col>
+                    </v-row >
+                        <v-col cols="12" sm="12" md="12" lg="12" class="mt-5" align="center" justify="center">
+                            <v-btn
+                                style="background-color: #F08D20"
+                                class="shadow-principal btn-hover"
+                                color="#26A69A"
+                                rounded-xl
+                                large
+                                dark
+                                @click="enviar"
+                            > Enviar mensaje </v-btn>
+                        </v-col>
+                        <v-col>
+                            <v-snackbar
+                                class="pb-8"
+                                :value="snackbar"
+                                :timeout="timeout"
+                                rounded="pill"
+                                :color="colorSnackbar"
+                            >
+                            {{ text }}
+                            </v-snackbar>
+                        </v-col>
+                    </v-row>
+                </v-form>
+            </v-col>
+        </v-row>
+    </div>       
 </template>
+<script>
+import Post from '../post/post'
+export default ({
+    data() {
+        return{
+            nombre:'',
+            documento:'',
+            email:'',
+            telefono:'',
+            ciudad:'',
+            asunto:'',
+            mensaje:'',
+
+            // snackbar
+            snackbar: false,
+            colorSnackbar: '',
+            text: '',
+            timeout: 2000,
+
+            termsConditions: false,
+
+            emailRules: [
+                v => /.+@.+\..+/.test(v) || '',
+            ],
+            nameRules: [
+                v => !!v || 'Campo requerido',
+            ],
+        }
+    },
+    methods:{
+        async enviar(){
+            if(this.nombre !== '' && this.documento !== '' && this.email !== '' && this.telefono !== ''&& this.ciudad !== '' && this.asunto !== '' && this.mensaje !== '' && this.termsConditions !== false ){
+                this.snackbar = true
+                this.colorSnackbar = 'success'
+                this.text ='Formulario enviado correctamente'
+                setTimeout(()=>{ this.snackbar = false }, 3000)
+                const data = {
+                    nombre :this.nombre ,
+                    documento:this.documento,
+                    email:this.email,
+                    telefono:this.telefono,
+                    ciudad:this.ciudad,
+                    asunto:this.asunto,
+                    mensaje:this.mensaje
+                }
+            await Post.postFormContac( data );
+                this.$refs.formContact.reset()
+            }else{
+                this.snackbar = true
+                setTimeout(()=>{ this.snackbar = false }, 3000)
+                this.colorSnackbar = 'red'
+                this.$refs.formContact.validate()
+            }
+        }
+    }
+})
+</script>

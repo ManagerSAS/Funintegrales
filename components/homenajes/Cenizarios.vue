@@ -36,18 +36,18 @@ export default {
             cenizarios:[
                 {
                     title: 'Cenizario sencillo',
-                    subtitle: 'Villavicencio',
-                    img:'https://res.cloudinary.com/dbepipmro/image/upload/v1632414659/CenizarioSencillo_o9ubye.webp'
+                    subtitle: 'Neiva',
+                    img:'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg'
                 },
                 {
                     title: 'Cenizario doble',
-                    subtitle: 'Villavicencio',
-                    img:'https://res.cloudinary.com/dbepipmro/image/upload/v1632414665/CenizarioDoble_uun45g.webp'
+                    subtitle: 'Neiva',
+                    img:'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg'
                 },
                 {
                     title: 'Cenizario octagonal',
-                    subtitle: 'Villavicencio',
-                    img:'https://res.cloudinary.com/dbepipmro/image/upload/v1632414663/CenizarioExagonal_tenrwo.webp'
+                    subtitle: 'Neiva',
+                    img:'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg'
                 },
             ]
         }

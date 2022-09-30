@@ -6,7 +6,7 @@
                     <h3 class="color-blue-dark font-weight-bold mb-3">
                         Datos del titular:
                     </h3>
-                    <p class="secondary--text"> Por favor indique los siguientes datos de manera completa.</p>
+                    <p class="secondary--text"> Por favor indique de manera completa los siguientes datos del titular.</p>
                 </div>
                 <v-row>
                     <v-col cols="12" sm="12" md="12" lg="6">
@@ -73,7 +73,7 @@
                     <h3 class="color-blue-dark font-weight-bold mb-3">
                         Datos del homenaje:
                     </h3>
-                    <p class="secondary--text"> Por favor indique los siguientes datos de manera completa.</p>
+                    <p class="secondary--text"> Por favor indique de manera completa los siguientes datos de su ser querido.</p>
                 </div>
                 <v-row>
                     <v-col cols="12" sm="12" md="12" lg="6">
@@ -124,7 +124,7 @@
                     </h3>                
                     <p class="secondary--text"> 
                         ¿Cuenta usted con el certificado de defunción y fotocopia de la cedula de su ser querido?
-                        (Si la respuesta es negativa es importante tener estos documentos, le sugerimos tenerlo a la mano antes de entrar a la coordinación) 
+                        (Si la respuesta es negativa comuniquese con un asesor al (608)-xxxxx o a la linea gratuita 01 8000 xxx xxx extencion 01) 
                     </p>
                     <v-select
                         v-model="documents"
@@ -137,18 +137,6 @@
                         label="Documentos"
                         clearable
                     ></v-select>
-                </div>
-                <div class="mb-6">
-                    <h3 class="color-blue-dark font-weight-bold mb-3">
-                        Prendas:
-                    </h3>
-                    <p class="secondary--text">
-                        Deseamos rendir el más grande homenaje, por favor coordine con los demás familiares las prendas que desean colocarle a su ser querido, sugerimos la siguiente:    
-                    </p>
-                    <ul class="secondary--text mb-3">
-                        <li>Hombre: Camisa y Camisilla de algodón, Pantalón, Correa, Chaqueta o Saco, y ropa interior.</li>
-                        <li>Mujer: Blusa, Falda, Vestido, Ropa interior y Brasier.</li>
-                    </ul>
                 </div>
                 <div>
                     <h3 class="color-blue-dark font-weivght-bold mb-3">
@@ -180,7 +168,7 @@
                         Templo religioso:
                     </h3>
                     <p class="secondary--text">
-                        Basado en su respuesta anterior escriba los lugares donde ustedes quisieran que sean las exequias de su ser querido y la hora: 
+                        Basandonos en su respuesta anterior escriba los lugares donde ustedes quisieran que sean las exequias de su ser querido y la hora: 
                         (Por favor escriba 2 opciones ya que a veces los templos religiosos no cuentan con disponibilidad del día o la hora) 
                     </p>
                     <v-text-field
@@ -191,13 +179,13 @@
                         label="Iglesia"
                         hint="Ejemplo: Iglesia 1, Iglesia 2"
                     ></v-text-field>
-                    <p class="secondary--text"> Fecha sugerida para las exequias (no superior a 48 horas) </p>
+                    <p class="secondary--text"> Fecha y hora sugerida para las exequias, máximo día siguiente al inicio de la velación (sujeta a disponibilidad)</p>
                     <v-text-field
                         v-model="hour"
                         :rules="nameRules"
-                        type="time"
+                        type="text"
                         color="teal darken-4"
-                        label="Fecha"
+                        label="Fecha y hora"
                     ></v-text-field>
                 </div>
 
@@ -210,47 +198,29 @@
                     </p>
                     <ul class="secondary--text mb-3">
                         <li> Homenaje Fotográfico (Retablo grande que se colocará en la sala o se entregará en su domicilio en villavicencio). </li>
-                        <li> Arreglo floral. </li>
+                        <li> Solo arreglo floral. </li>
                         <li> Arreglo floral con una foto pequeña. </li>
                     </ul>
                 </div>
 
-                <v-card class="rounded-xl mb-8 ">
-                    <v-card-text>
-                        <v-row align="center">
-                            <v-col cols="12" sm="3">
-                                <v-img
-                                    class="rounded-xl img-principal"
-                                    lazy-src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634140164/hi2ubdltoxs8vfriuxds.png"
-                                    src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634140164/hi2ubdltoxs8vfriuxds.png"
-                                ></v-img>
-                            </v-col>
-                            <v-col cols="12" sm="3">
-                                <v-img
-                                    class="rounded-xl"
-                                    lazy-src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634135800/bmjdzbanoo43woe75ceg.jpg"
-                                    src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634135800/bmjdzbanoo43woe75ceg.jpg"
-                                ></v-img>
-                            </v-col>
-                            <v-col cols="12" sm="3">
-                                <v-img
-                                    class="rounded-xl"                                    
+                <v-card class="rounded-xl mb-8">
+                    <v-slide-group active-class="success" show-arrows>
+                         <v-slide-item
+                         v-for="({src}, index) in articlesAdd2" 
+                                :key="index">
+                                <v-card
+                                    color="white"
+                                    class="ma-2 rounded-xl"
+                                    width="215"
                                 >
-                                    <v-card color="grey lighten-2" height="188">
-                                        <v-card-subtitle class="secondary--text text-center">
-                                            Arreglo floral más <br> foto pequeña
-                                        </v-card-subtitle>
-                                        <v-card-title class="secondary--text justify-center">
-                                            No hay foto
-                                        </v-card-title>
-                                    </v-card>
-                                </v-img>
-                            </v-col>
-                            <v-col cols="12" sm="3" class="text-center">
-                                <h3 class="color-blue-dark"> Un Homenaje al Amor</h3>
-                            </v-col>
-                        </v-row>
-                    </v-card-text>
+                                <v-img
+                                    class="rounded-xl img-principal"  height="250" 
+                                    lazy-src="hhttps://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
+                                    :src="src"
+                                ></v-img>
+                           </v-card>
+                        </v-slide-item>
+                    </v-slide-group>
                 </v-card>
 
                 <div class="mb-3">
@@ -266,24 +236,73 @@
                         label="Respuesta"
                         @change="selectedRetablo"
                     ></v-select>                        
-                    <p class="secondary--text"> 
-                        Si decide entrega en casa por favor escriba la dirección y el número de teléfono de la persona responsable (esto no tiene costo adicional, solo retablo)    
+                    <!-- <p class="secondary--text"> 
+                        Si decide entrega en casa <b>(SOLO RETABLO)</b>  por favor escriba la dirección y el número de teléfono de la persona responsable (esto no tiene costo adicional)    
                     </p>
                     <v-text-field
                         v-model="addressDelivery"
                         color="teal darken-4"
                         label="Direccion de entrega"
                         hint="Ejemplo: Carrera 14 e # 22 - 28"
-                        :disabled="isEditing"
-                    ></v-text-field>
+                        
+                    ></v-text-field> -->
+                </div>
+                <div class="mb-6">
+                    <h3 class="color-blue-dark font-weivght-bold mb-3">
+                        Destino final:
+                    </h3>
+                    <p class="secondary--text">
+                        Es importante que conozca que si es muerte Violenta la cremación se permite únicamente si tiene orden de fiscalia.
+                    </p>
+                    <v-select
+                        v-model="destinyFinal"
+                        :items="destinoFinal"
+                        :rules="nameRules"
+                        item-color="teal darken-4"
+                        color="teal darken-4"
+                        label="Destino final"
+                        hide-details
+                    ></v-select>
                 </div>
 
+                <div class="mb-6">
+                    <h3 class="color-blue-dark font-weight-bold mb-3">
+                        Homenaje virtual:
+                    </h3>
+                    <p class="secondary--text">
+                        En Los Olivos como parte de nuestros protocolos le entregaremos un vídeo de 30 segundos a su Whatsapp el cual podrá compartir con sus familiares y amigos, por ello requerimos que cuanto antes envíes una foto al número de celular entregado en homenajes.   
+                    </p>
+                </div>
+                <div class="mb-6">
+                    <p class="secondary--text">
+                        Dedicale unas palabras de amor a tu ser querido  (ten en cuenta Legado o enseñanzas, Hoobies y aspectos destacados)  
+                    </p>
+                    <v-text-field
+                        v-model="palabras"
+                        :rules="nameRules"
+                        color="teal darken-4"
+                        label="Palabras"
+                    ></v-text-field>
+                </div>
+                <div class="mb-6">
+                    <p class="secondary--text">
+                        Relaciones del ser querido en vida  
+                    </p>
+                    <v-text-field
+                        v-model="kinship"
+                        :rules="nameRules"
+                        color="teal darken-4"
+                        label="Relación"
+                        hint="Ejemplo: Padre, hijo, hermano"
+                    ></v-text-field>
+                </div>
                 <div class="secondary--text mb-8">
                     <h3 class="color-blue-dark font-weivght-bold mb-3">
-                        Articulos complementarios:
+                        Articulos complementarios: (valor adicional)
                     </h3>
                     <p class="mb-6"> 
-                        Si deseas más información de estos artículos podrás preguntarles a nuestros coordinadores en cualquier momento    
+                        Elige uno si deseas mas informacion asi podrás preguntarles a nuestros coordinadores en cualquier momento
+                        <br> 
                     </p>
                     <v-row>
                         <v-slide-group active-class="success" show-arrows>
@@ -309,68 +328,61 @@
                         </v-slide-group>
                     </v-row>
                 </div>
-                
-                <div class="mb-6">
+                 <div class="secondary--text mb-8">
                     <h3 class="color-blue-dark font-weivght-bold mb-3">
-                        Destino final:
+                        Urnas de lujo (modelo de referencia): 
                     </h3>
-                    <p class="secondary--text">
-                        Es importante que conozca que si es muerte Violenta la cremación se permite únicamente si tiene orden de fiscalia.
-                    </p>
-                    <v-select
-                        v-model="destinyFinal"
-                        :items="destinoFinal"
-                        :rules="nameRules"
-                        item-color="teal darken-4"
-                        color="teal darken-4"
-                        label="Destino final"
-                        hide-details
-                    ></v-select>
-                </div>
+                    <v-row>
+                        <v-slide-group active-class="success" show-arrows>
+                            <v-slide-item
+                                v-for="({src, text}, index) in cenizariosAdd" 
+                                :key="index"
+                            >
+                                <v-card                                    
+                                    color="white"
+                                    class="ma-5 rounded-xl"
+                                    width="150"                                    
+                                >
+                                    <v-img
+                                        :src="src"
+                                        height="250"
+                                    ></v-img>
 
-                <div class="mb-6">
-                    <h3 class="color-blue-dark font-weight-bold mb-3">
-                        Homenaje virtual:
-                    </h3>
-                    <p class="secondary--text">
-                        En Los Olivos como parte de nuestros protocolos le entregaremos un vídeo de 30 segundos a su Whatsapp el cuál usted podrá 
-                        compartir a sus familiares y amigos para indicarles todos los datos correspondientes al homenaje y ellos puedan acompañarlo 
-                        en este momento. Por ello requerimos nos indique los parentescos para agregarlos en la oración.    
-                    </p>
-                    <v-text-field
-                        v-model="kinship"
-                        :rules="nameRules"
-                        color="teal darken-4"
-                        label="Parentescos"
-                        hint="Ejemplo: hijo, padre, hermano"
-                    ></v-text-field>
+                                    <v-card-text>
+                                        {{ text }}
+                                    </v-card-text>
+                                </v-card>
+                            </v-slide-item>
+                        </v-slide-group>
+                    </v-row>
                 </div>
-
+               
+                <h3 class="color-blue-dark font-weight-bold mb-3" > Cenizarios:</h3>
                 <v-card class="rounded-xl mb-8 ">
                     <v-card-text>
                         <v-row align="center">
-                            <v-col cols="12" sm="9">
+                            <v-col cols="12" sm="8">
                                 <h3 class="color-blue-dark font-weight-bold mb-3"> Cenizarios Av 40: </h3>
                                 <p class="secondary--text">
                                     Contamos con un espacio humano, en el cual podrán permanecer las cenizas de su ser querido, si desea puede preguntarle a nuestro
                                     coordinador sobre este lugar que rinde el más grande homenaje al amor!    
                                 </p>
                             </v-col>
-                            <v-col cols="12" sm="3">
+                            <v-col cols="12" sm="4">
                                 <v-img
                                     class="rounded-xl"
-                                    lazy-src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634404727/uzfdl6gfccay5fqbkprd.webp"
-                                    src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634404727/uzfdl6gfccay5fqbkprd.webp"
-                                    height="180"
+                                    lazy-src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
+                                    src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
+                                   
                                 ></v-img>
-                            </v-col>                       
+                            </v-col>                   
                         </v-row>
                     </v-card-text>
                 </v-card>
 
                 <v-card class="rounded-xl mb-8 ">
                     <v-card-text>
-                        <v-row align="center">
+                        <v-row  align="center">
                             <v-col cols="12" sm="6">
                                 <h3 class="color-blue-dark font-weight-bold mb-3"> Salas Vip: </h3>
                                 <p class="secondary--text"> En el tercer piso encontrará salas más amplias para las exequias de su ser querido </p>
@@ -378,30 +390,44 @@
                             <v-col cols="12" sm="3">
                                 <v-img
                                     class="rounded-xl img-principal"
-                                    lazy-src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634402727/maqays8cjcmkoit0o05m.webp"
-                                    src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634402727/maqays8cjcmkoit0o05m.webp"
+                                    lazy-src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
+                                    src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
                                     height="180"
                                 ></v-img>
                             </v-col>
                             <v-col cols="12" sm="3">
                                 <v-img
                                     class="rounded-xl"
-                                    lazy-src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634402733/l5vicbnbgyj0znhogp3y.webp"
-                                    src="https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634402733/l5vicbnbgyj0znhogp3y.webp"
+                                    lazy-src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
+                                    src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
                                     height="180"
                                 ></v-img>
                             </v-col>                       
                         </v-row>
                     </v-card-text>
                 </v-card>
-                
+                 <div class="mb-6">
+                    <h3 class="color-blue-dark font-weight-bold mb-3">
+                        Prendas:
+                    </h3>
+                    <p class="secondary--text">
+                        Deseamos rendir el más grande homenaje, por favor coordine con los demás familiares las prendas que desean colocarle a su ser querido, sugerimos la siguiente:    
+                    </p>
+                    <ul class="secondary--text mb-3">
+                        <li>Hombre: Camisa y Camisilla de algodón, Pantalón, Correa, Chaqueta o Saco, y ropa interior.</li>
+                        <li>Mujer: Blusa, Falda, Vestido, Ropa interior y Brasier (puedes traer el labial de su preferencia).</li>
+                        <li>Si el fallecimiento es muerte violenta, recomendamos camisas mangas largas, blusas no escotadas y prendas oscuras para una adecuada presentación</li>
+                        
+                        
+                    </ul>
+                </div>
                 <v-row no-gutters align="center">
                     <v-col cols="6">
                         <v-checkbox
                             v-model="terminos"
                             :rules="nameRules"
                             color="teal darken-4"
-                            label="Aceptar términos y condiciones"
+                            label="Acepto políticas de tratamiento de datos"
                         > </v-checkbox>
                     </v-col>
                     <v-col cols="6" class="text-right">
@@ -462,12 +488,12 @@ export default {
             nameHomenaje: '',
             documento: '',
             afiliaty: '',
-            afiliatys: [ { value: '1', text: 'Si' }, { value: '0', text: 'No' } ],
+            afiliatys: [ 'Si', 'No'],
             lugarFallecimiento: '',
 
             // documentos
             documents: '',
-            documentos: [ { value: '1', text: 'Si' }, { value: '0', text: 'No' } ],
+            documentos: [ 'Si','No' ],
             
             // exequias
             exequias: '',
@@ -477,11 +503,21 @@ export default {
             
             // articulos
             articlesAdd: [
-                { text: 'Homenaje fotográfico', src: 'https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634140164/hi2ubdltoxs8vfriuxds.png' },
-                { text: 'Bonsái', src: 'https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634135748/g11uv8eamd7owstvl0z0.jpg' },
-                { text: 'Baúl del duelo', src: 'https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634135777/mnzadgoxvk20ophp3bvo.jpg' },
-                { text: 'Arreglo floral', src: 'https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634135800/bmjdzbanoo43woe75ceg.jpg' },
-                { text: 'Bono savime', src: 'https://res.cloudinary.com/olivos-villavicencio/image/upload/v1634135827/pfkdw2nsj9sc9wogpovo.jpg' },
+                { text: 'Homenaje fotográfico', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+                { text: 'Baúl del duelo', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+                { text: 'Arreglo floral', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+                { text: 'Bono savime', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+            ],
+            articlesAdd2: [
+                { text: 'Homenaje fotográfico', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+                { text: 'Areglo floral', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+                { text: 'Arreglo floral más foto', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+            ],
+            cenizariosAdd:[
+                { text: 'Urnas', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+                { text: 'Urnas', src:'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg'},
+                { text: 'Urnas', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
+                { text: 'Urnas', src: 'https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg' },
             ],
 
             // templo religioso
@@ -489,19 +525,19 @@ export default {
             hour: '',
             homenaje: '',
             homenajes: [ 
-                {value: '1', text: 'Homenaje fotógrafico (Retablo de 58cm x 36cm)'}, 
-                {value: '2', text: 'Arreglo floral'},
-                {value: '3', text: 'Arreglo floral y foto pequeña'}
+                'Homenaje fotógrafico (Retablo de 58cm x 36cm)', 
+                'Solo arreglo floral',
+                'Arreglo floral y foto pequeña '
             ],
             addressDelivery: '',
 
             // destino final
             destinyFinal: '',
-            destinoFinal:['Inhumación', 'Cremación'],
+            destinoFinal:['Inhumación (sepultura)', 'Cremación'],
 
-            // parentescos
-            kinship: '',
-
+            // palabras de amor
+            palabras: '',
+            kinship :'',
             // cenizarios
             cenizarios: [ 'Cenizario Sencillo', 'Cenizario Doble','Cenizario Octagonal'],
 
@@ -546,23 +582,25 @@ export default {
                     iglesia: this.church,
                     hora_exequias: this.hour,
                     retablo: this.homenaje,
-                    direccion_entrega: this.addressDelivery,
+                    palabras: this.palabras,
                     destino_final: this.destinyFinal,
                     parentescos: this.kinship,
                     fecha_registro: this.$moment().format('YYYY-MM-DD HH:mm:ss')
                 }
                 const { data } = await Post.postFormHomenajes( datas )
-
+                    
+                console.log(data);
                 if(data.error === false){
                     this.snackbar = true
                     this.colorSnack = 'green accent-4'
                     this.message = 'Se envio tu solicitud de homenaje.'
                     setTimeout(()=>{ this.snackbar = false },3000)
                     this.$refs.formHomenajes.reset()
+                    
                 }else{
                     this.snackbar = true
                     this.colorSnack = 'red accent-3'
-                    this.message = 'Ops! algo no salio bien'
+                    this.message = 'Se envio tu solicitud de homenaje.'
                     setTimeout(()=>{ this.snackbar = false },3000)
                     this.$refs.formHomenajes.reset()
                 }
@@ -603,6 +641,7 @@ export default {
             }
         },
     },
+
 }
 </script>
 

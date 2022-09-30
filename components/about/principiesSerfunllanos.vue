@@ -3,7 +3,7 @@
         <v-row>
             <v-col cols="12" sm="12" md="12" lg="6">
                 <h2 class="display-1 olivos--text font-weight-bold">
-                    Principios Serfunllanos
+                    Principios emcoofun
                 </h2>
             </v-col>
         </v-row>
@@ -40,27 +40,27 @@ export default {
                 {
                     icon: 'mdi-account',
                     title: 'Trabajo en equipo',
-                    description: 'Las bases de nuestras acciones son : El diseño y oferta integral de planes y servicios, las sinergias entre las áreas de la organización.',
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui reprehenderit rem quas autem animi natus provident est numquam nisi, odio libero excepturi magnam perspiciatis error, soluta veniam voluptas, alias ea.',
                 },
                 {
                     icon: 'mdi-hand-heart',
                     title: 'Responsabilidad y Compromiso',
-                    description: 'Asumimos la responsabilidad y cumplimiento que garantiza nuestra propia satisfacción, la de nuestros clientes y resultados.',
+                    description: 'ALorem ipsum dolor, sit amet consectetur adipisicing elit. Qui reprehenderit rem quas autem animi natus provident est numquam nisi, odio libero excepturi magnam perspiciatis error, soluta veniam voluptas, alias ea.',
                 },
                 {
                     icon: 'mdi-flag',
                     title: 'Liderazgo',
-                    description: 'Estamos atentos en la búsqueda de oportunidades de desarrollo en los planes, servicios y las necesidades de nuestros clientes.',
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui reprehenderit rem quas autem animi natus provident est numquam nisi, odio libero excepturi magnam perspiciatis error, soluta veniam voluptas, alias ea.',
                 },
                 {
                     icon: 'mdi-eye',
                     title: 'Transparencia',
-                    description: 'Todos nuestros actos administrativos son diáfanos y visibles a la luz de nuestros clientes.',
+                    description: 'TLorem ipsum dolor, sit amet consectetur adipisicing elit. Qui reprehenderit rem quas autem animi natus provident est numquam nisi, odio libero excepturi magnam perspiciatis error, soluta veniam voluptas, alias ea.',
                 },
                 {
                     icon: 'mdi-emoticon-happy',
                     title: 'Pasión por excelencia',
-                    description: 'Nuestro trabajo diario se guía por la calidad y el mejoramiento continuo de nuestros productos y servicios.',
+                    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui reprehenderit rem quas autem animi natus provident est numquam nisi, odio libero excepturi magnam perspiciatis error, soluta veniam voluptas, alias ea.',
                 },
             ]
         }

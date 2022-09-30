@@ -36,24 +36,24 @@ export default {
             model: null,
             salas:[
                 {
-                    title: 'Sala Diamante',
-                    subtitle: 'Villavicencio',
-                    img:'https://res.cloudinary.com/dbepipmro/image/upload/v1632410784/SalaDiamante_nzxuxn.webp'
+                    title: 'Sala ',
+                    subtitle: 'Neiva',
+                    img:'https://res.cloudinary.com/dhl17zanz/image/upload/v1646318574/neiva/Sede_Neiva1_avqqka.jpg'
                 },
                 {
-                    title: 'Sala Presidencial',
-                    subtitle: 'Villavicencio',
-                    img:'https://res.cloudinary.com/dbepipmro/image/upload/v1632411367/SalaPresidencial_s6gfvh.webp'
+                    title: 'Sala ',
+                    subtitle: 'Garzón',
+                    img:'https://res.cloudinary.com/dhl17zanz/image/upload/v1646318768/neiva/Sede_Garz%C3%B3n2_qlvhv1.jpg'
                 },
                 {
-                    title: 'Sala Presidencial',
-                    subtitle: 'Yopal',
-                    img:'https://res.cloudinary.com/dbepipmro/image/upload/v1632411767/sala3_rc72ex.webp'
+                    title: 'Sala ',
+                    subtitle: 'Folencia',
+                    img:'https://res.cloudinary.com/dhl17zanz/image/upload/v1646318797/neiva/Sede_Florencia2_pscdih.jpg'
                 },
                 {
-                    title: 'Sala Presidencial',
-                    subtitle: 'Granada',
-                    img:'https://res.cloudinary.com/dbepipmro/image/upload/v1632412059/Sala3_uxmnaq.webp'
+                    title: 'Sala ',
+                    subtitle: 'Pitalito',
+                    img:'https://res.cloudinary.com/dhl17zanz/image/upload/v1646318827/neiva/Sede_Pitalito2_n1xcnn.jpg'
                 }
             ]
         }

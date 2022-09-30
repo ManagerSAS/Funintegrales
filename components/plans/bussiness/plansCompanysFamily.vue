@@ -2,12 +2,12 @@
     <div>        
         <v-row class="mb-15" align="center" justify="center">
             <v-col cols="12" sm="12" md="6" class="secondary--text">
-                <h1 class="display-1 font-weight-bold color-blue-dark mb-6"> Plan mi familia </h1>
-                <p>Diseñado para que puedas proteger tu núcleo familiar básico, según tu estado civil (Casado o Soltero), y así garantizar la tranquilidad de cada uno de los miembros de tu familia.</p>
+                <h1 class="display-1 font-weight-bold color-blue-dark mb-6"> Plan 1 </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quia eligendi ratione fuga dolorem aperiam fugit atque harum consequuntur, explicabo nam temporibus, aliquid perferendis neque! Quos dignissimos corrupti excepturi ea!</p>
                 <ul class="mb-6">
-                    <li> Afiliado principal y conyugue sin límite de edad. </li>
-                    <li> Hijos o hermanos. </li>
-                    <li> Padres y/o suegros. </li>
+                   <li> item 1 </li>
+                    <li> item 2 </li>
+                    <li> item 3 </li>
                 </ul>
                 <v-btn
                     class="shadow-principal btn-hover"
@@ -15,13 +15,13 @@
                     color="blue accent-3"
                     dark                    
                 >
-                    Adquirir plan mi familia
+                    Adquirir 2
                 </v-btn>
             </v-col>
             <v-col cols="12" sm="12" md="6" class="secondary--text text--right">
                 <v-img
-                    lazy-src="https://res.cloudinary.com/dbepipmro/image/upload/v1632340623/planFamilia_kh6zel.png"
-                    src="https://res.cloudinary.com/dbepipmro/image/upload/v1632340623/planFamilia_kh6zel.png"
+                    lazy-src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
+                    src="https://res.cloudinary.com/dhl17zanz/image/upload/v1645899921/Sede_Neiva9_uiq1qw.jpg"
                     width="550"
                 ></v-img>
             </v-col>
@@ -76,38 +76,57 @@ export default {
                     title: 'Desprendimiento',
                     icon: 'mdi-human-handsdown mdi-36px',
                     list:[
-                        'Atención las 24 horas',
-                        'Arreglo estético.',
-                        'Cofre.',
-                        'Traslado Nacional.'
+                        'Item 1',
+                        'Item 2',
+                        'Item 3',
+                        'Item 4',
+                        'Item 5',
+                        
+                        // 'Atención las 24 horas',
+                        // 'Arreglo estético.',
+                        // 'Cofre.',
+                        // 'Traslado Nacional.'
                     ]
                 },
                 {
                     title: 'Acogida',
                     icon: 'mdi-mother-heart mdi-36px',
                     list:[
-                        'Sala de velación.',
-                        'Velación Virtual.',
-                        'Acompañamiento musical.',
-                        'Arreglo floral.'
+                        'Item 1',
+                        'Item 2',
+                        'Item 3',
+                        'Item 4',
+                        'Item 5',
+                        // 'Sala de velación.',
+                        // 'Velación Virtual.',
+                        // 'Acompañamiento musical.',
+                        // 'Arreglo floral.'
                     ]
                 },
                 {
                     title: 'Despedida',
                     icon: 'mdi-hand-heart mdi-36px',
                     list:[
-                        'Cinta membretada.',
-                        'Transporte para acompañantes.',
-                        'Carroza fúnebre.',
-                        'Cremación o inhumación por 4 años con los convenios que tenga la red nacional Los Olivos. '
+                        'Item 1',
+                        'Item 2',
+                        'Item 3',
+                        'Item 4',
+                        'Item 5',
+                        // 'Cinta membretada.',
+                        // 'Transporte para acompañantes.',
+                        // 'Carroza fúnebre.',
+                        // 'Cremación o inhumación por 4 años con los convenios que tenga la red nacional Los Olivos. '
                     ]
                 },
                 {
                     title: 'Renacimiento',
                     icon: 'mdi-human-handsup mdi-36px',
                     list:[
-                        'Misa mensual y anual.',
-                        'Encuentros de apoyo y duelo. ',
+                        'Item 1',
+                        'Item 2',
+                        'Item 3',
+                        // 'Misa mensual y anual.',
+                        // 'Encuentros de apoyo y duelo. ',
                     ]
                 },
             ]

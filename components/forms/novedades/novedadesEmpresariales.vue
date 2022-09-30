@@ -2,7 +2,7 @@
     <div>
         <v-row>
             <v-col cols="12" sm="12" md="12" lg="8">
-                <v-form ref="formNovelty" autocomplete="off">
+                <v-form ref="formNovelty" autocomplete="off" enctype="multipart/form-data">
                     <v-row class="mb-3">
                         <v-col cols="12">
                             <Note :message="msgNote"/>
@@ -50,7 +50,6 @@
                             ></v-text-field>
                         </v-col>
                     </v-row>                    
-
                     <!-- list noveltys -->
                     <v-expansion-panels class="mb-6 rounded-xl">
                         <v-expansion-panel class="rounded-xl">
@@ -95,6 +94,7 @@
                                             ></v-text-field>
                                         </v-col>
                                         <v-col cols="12" sm="12" md="12" lg="4">
+                                            <p>*El mes no puede ser superior al mes anterior*</p>
                                             <v-select
                                                 v-model="month"
                                                 :items="itemsMonths"
@@ -102,6 +102,7 @@
                                                 color="teal darken-3"
                                                 label="Mes apartir de cuando aplica"
                                                 hide-details
+                                                @change="validarMes()"
                                             ></v-select>
                                         </v-col>                        
                                     </v-row>
@@ -149,33 +150,31 @@
                             </v-expansion-panel-content>
                         </v-expansion-panel>
                     </v-expansion-panels>
-
                     <v-row>
                         <v-col cols="12" sm="12" md="12" lg="12">
                             <ul class="secondary--text">
                                 <li> Proximamente podrás adjuntar archivos con tus listados </li>
-                                <!-- <li> Podrá adjuntar un archivo si lo requiere, formatos permitidios: Excel(.xls .xlsx) o PDF </li>
-                                <li> Si cuenta con un listado en excel con esta información podrá adjuntarlo y omitir la novedad.</li>
-                                <li> Si cuenta con un PDF asegurese de que contenga toda la información</li> -->
+                                 <!-- <li> Podrá adjuntar un archivo si lo requiere, formatos permitidios: Excel(.xls .xlsx) o PDF </li> -->
+                                <!-- <li> Si cuenta con un listado en excel con esta información podrá adjuntarlo y omitir la novedad.</li> -->
+                                <!-- <li> Si cuenta con un PDF asegurese de que contenga toda la información</li> --> 
                             </ul>
                             <v-file-input
                                 v-model="file"
-                                name="file"
                                 multiple
+                                name="file"
                                 type="file"
                                 accept=".pdf, .xls, .xlsx"
                                 color="teal darken-3"
                                 label="Adjuntar archivo(s)"
-                                disabled
+                                @change="onSelectedFiles(file)"
                             ></v-file-input>
-                            <!-- @change="onSelectedFiles" -->
-                        </v-col>
+                        </v-col> 
                     </v-row>
                     <v-row>
                         <v-col cols="12" sm="12" md="12" lg="12">
-                            <p class="secondary--text">
+                            <h4 class="secondary--text">
                                 De acuerdo con la Ley Estatutaria 1581 de 2.012 de Protección de Datos y con el Decreto 1377 de 2.013, le informamos que sus datos consignados en el presente formulario serán incorporados en una base de datos responsabilidad de SERFUNLLANOS LOS OLIVOS, siendo tratados con la finalidad de: Fines históricos, científicos o estadísticos, Gestión de estadísticas internas, Gestión administrativa, Gestión de clientes, Encuestas de opinión. De igual modo, se le informa que la base de datos en la que se encuentran sus datos personales es tratada cumpliendo con las medidas de seguridad definidas en la política de tratamiento desarrollada por SERFUNLLANOS LOS OLIVOS
-                            </p>
+                            </h4>
                             <v-checkbox
                                 v-model="termsConditions"
                                 :rules="nameRules"
@@ -200,19 +199,20 @@
                                 dark
                                 color="teal darken-3"
                                 @click="sendInfoNovelty"
-                            > Enviar información </v-btn>
+                            > Enviar información 
+                            </v-btn>
                         </v-col>
-                    </v-row>
-                </v-form>
-            </v-col>
+                    </v-row> 
+                 </v-form>
+             </v-col>
             <v-col cols="12" sm="12" md="12" lg="4">
                 <h3 class="color-blue-dark font-weivght-bold mb-6">
                     Listado novedades:
                 </h3>
                 <List :list="list"/>
             </v-col>
-        </v-row>
-        <Message :snackbar="snackbar" :colorSnackbar="colorSnackbar" :message="message"/>
+         </v-row>
+        <Message :snackbar="snackbar" :color-snackbar="colorSnackbar" :message="message"/> 
     </div>
 </template>
 <script>
@@ -222,10 +222,14 @@ import Note from '../notas.vue'
 import Post from '../../post/post'
 import Message from '../messages/message1.vue'
 import List from './listNovedades.vue'
-
+// import uploadImage from '~/components/helpers/uploadImage'
 export default {
     components:{
-        Note, Gcaptcha, List, Message
+        Note, 
+        Gcaptcha, 
+        List,
+        Message,
+        
     },
     data(){
         return{
@@ -236,7 +240,7 @@ export default {
             nameCompany: '',
             funcionary: '',
             workCenter: '',
-
+           
             file: null,
 
             // list noveltys
@@ -278,36 +282,98 @@ export default {
 
             termsConditions: false,
             resCaptcha: false,
-        }
-    },    
-    methods:{
 
+            api : "https://api.cloudinary.com/v1_1/olivos-villavicencio/image/upload",
+            Url :'',
+        }
+    }, 
+    methods:{
+        validarMes(){
+                let mes = this.month;
+                if(mes === 'Enero'){
+                    mes = 0;
+                }if(mes === 'Febrero'){
+                    mes = 1;
+                }if(mes === 'Marzo'){
+                    mes = 2;
+                }if(mes === 'Abril'){
+                    mes = 3;
+                }if(mes === 'Mayo'){
+                    mes = 4;
+                }if(mes === 'Junio'){
+                    mes = 5;
+                }if(mes === 'Julio'){
+                    mes = 6;
+                }if(mes === 'Agosto'){
+                    mes = 7;
+                }if(mes === 'Septiembre'){
+                    mes = 8;
+                }if(mes === 'Octubre'){
+                    mes = 9;
+                }if(mes === 'Noviembre'){
+                    mes = 10;
+                }if(mes === 'Diciembre'){
+                    mes = 11;
+                }
+            const hoy = new Date();
+            const mesactal = hoy.getMonth();
+            const res=mesactal-mes;
+            if(res>1){
+                 this.snackbar = true
+                    this.colorSnackbar = 'red accent-3'
+                    this.message = 'Mes no debe ser superior al mes requerido'
+                    setTimeout(()=>{ this.snackbar = false }, 3000)
+            }
+            },
+        async onSelectedFiles(file){  
+           
+        //    const Url = await uploadImage(file)
+            const formdata = new FormData();
+            formdata.append("upload_preset", "noveltys");
+            formdata.append("file", file[0]);
+
+            const requestOptions = {
+            method: 'POST',
+            body: formdata,
+            redirect: 'follow'
+            };
+            await fetch("https://api.cloudinary.com/v1_1/olivos-villavicencio/image/upload", requestOptions)
+            .then(response => response.json())
+            .then(data => {
+                this.Url = data.url  
+                })
+        },
         async sendInfoNovelty(){
             let list;
-
-            if(this.emailCompany !== '' && this.nameCompany !== '' && this.funcionary !== '' && this.termsConditions && this.resCaptcha === true){
-                                
+            if(this.emailCompany !== '' && this.nameCompany !== '' && this.funcionary !== '' && this.termsConditions && this.resCaptcha === true){         
                 if(this.list !== 0){
                     list = this.list
-                }
-
+                };         
                 const data = {
                     workCenter: this.workCenter,
                     company: this.nameCompany,
                     email: this.emailCompany,
                     nameFuncionary: this.funcionary,
-                    files: this.file,
+                    files: this.Url,
                     listNovelty: list
                 }
-
-                await Post.postFormNoveltys( data )
-                
-                this.snackbar = true
-                this.colorSnackbar = 'green accent-4'
-                this.message = 'Se envio tu solicitud'
-                setTimeout(()=>{ this.snackbar = false },3000)
-                this.$refs.formNovelty.reset()
-                                    
+                // console.log({data})
+                await Post.postFormNoveltys( data );
+                // console.log(response);
+                // if(response.error === false){
+                    this.snackbar = true
+                    this.colorSnackbar = 'green accent-4'
+                    this.message = 'Se envio tu solicitud'
+                    setTimeout(()=>{ this.snackbar = false }, 3000)
+                    this.$refs.formNovelty.reset()
+                // }else{
+                //     this.snackbar = true
+                //     this.colorSnackbar = 'red accent-3'
+                //     this.message = 'no se envio tu solicitud'
+                //     console.log(response.error)
+                //     setTimeout(()=>{ this.snackbar = false }, 3000)
+                //     this.$refs.formNovelty.reset()
+                // }                    
             }else{
                 this.snackbar = true
                 this.colorSnackbar = 'red accent-3'
